@@ -13,7 +13,7 @@ pipeline {
                 sh 'cp -r ${WORKSPACE}/src/* ${GOPATH}/src/goviolinapp'
                 sh 'cd ${GOPATH}/src/goviolinapp'
                 sh 'go mod init main.go'
-                sh 'go build'
+                sh 'go build ${GOPATH}/src/goviolinapp/main.go'
             }
         }
 
