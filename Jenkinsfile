@@ -8,10 +8,10 @@ pipeline {
                 }
             }
             steps {
-                sh "cd ${GOPATH}/src/"
-                sh "mkdir -p ${GOPATH}/src/goviolinapp"
-                sh "cp -r ${WORKSPACE}/src/* ${GOPATH}/src/goviolinapp"
-                sh "go mod init && go build"
+                sh 'cd ${GOPATH}/src/'
+                sh 'mkdir -p ${GOPATH}/src/goviolinapp'
+                sh 'cp -r ${WORKSPACE}/src/* ${GOPATH}/src/goviolinapp'
+                sh 'go mod init && go build'
             }
         }
 
