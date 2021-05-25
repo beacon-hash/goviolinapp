@@ -12,7 +12,7 @@ pipeline {
                 sh 'mkdir -p ${GOPATH}/src/goviolinapp'
                 sh 'cp -r ${WORKSPACE}/src/* ${GOPATH}/src/goviolinapp'
                 sh 'cd ${GOPATH}/src/goviolinapp'
-                sh 'go mod init'
+                sh 'go mod init main.go'
                 sh 'go build'
             }
         }
