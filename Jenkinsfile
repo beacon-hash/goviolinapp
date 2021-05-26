@@ -11,8 +11,8 @@ pipeline {
                 sh 'cd ${GOPATH}/src/'
                 sh 'mkdir -p ${GOPATH}/src/goviolinapp'
                 sh 'cp -r ${WORKSPACE}/src/* ${GOPATH}/src/goviolinapp'
-                sh 'cd ${GOPATH}/src/goviolinapp'
-                sh 'go build ${GOPATH}/src/goviolinapp/main.go'
+                //sh 'cd ${GOPATH}/src/goviolinapp'
+                sh 'go build'
             }
         }
 
