@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: goviolin-svc
+  labels:
+    app: goviolinapp
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 8080
+      port: 8010
+      nodePort: 30010
+  selector:
+    app: goviolinapp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goviolin-deployment
+  labels:
+    app: goviolinapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: goviolinapp
+  template:
+    metadata:
+      labels:
+        app: goviolinapp
+    spec:
+      containers:
+        - name: goviolinapp
+          image: kerracan/instabugapps
