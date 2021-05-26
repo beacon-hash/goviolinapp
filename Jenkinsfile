@@ -1,4 +1,7 @@
 pipeline {
+    environment {
+        registry = "kerracan/instabugapps"
+    }
     agent any
     stages {
         stage('Build') {
