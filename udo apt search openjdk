@@ -1,0 +1,11 @@
+[0;1;31m●[0m jenkins.service - LSB: Start Jenkins at boot time
+     Loaded: loaded (/etc/init.d/jenkins; generated)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2021-05-27 20:08:07 EET; 1min 24s ago
+       Docs: man:systemd-sysv-generator(8)
+
+May 27 20:08:07 LinuxOS systemd[1]: Starting LSB: Start Jenkins at boot time...
+May 27 20:08:07 LinuxOS jenkins[37762]: ERROR: No Java executable found in current PATH: /bin:/usr/bin:/sbin:/usr/sbin
+May 27 20:08:07 LinuxOS jenkins[37762]: If you actually have java installed on the system make sure the executable is in the aforementioned path and that 'type -p java' returns the java executable path
+May 27 20:08:07 LinuxOS systemd[1]: [0;1;39m[0;1;31m[0;1;39mjenkins.service: Control process exited, code=exited, status=1/FAILURE[0m
+May 27 20:08:07 LinuxOS systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mjenkins.service: Failed with result 'exit-code'.[0m
+May 27 20:08:07 LinuxOS systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start LSB: Start Jenkins at boot time.[0m
