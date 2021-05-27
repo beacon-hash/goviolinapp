@@ -11,7 +11,7 @@ USER $APP_USER
 
 COPY . /$APP_HOME
 
-RUN go mod init && go build -o violinApp 
+RUN go build -o violinApp 
 
 EXPOSE 8080
 
