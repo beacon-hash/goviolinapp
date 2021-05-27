@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withKubeConfig([
-                    credentialsID: 'jenkins-admin',
+                    credentialsId: 'jenkins-admin',
                     serverUrl: 'https://192.168.49.2:8443',
                     contextName: 'minikube',
                     clusterName: 'minikube',
