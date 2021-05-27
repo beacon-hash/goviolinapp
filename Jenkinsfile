@@ -32,5 +32,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                withKubeConfig([
+                    credentialsID: 'jenkins-admin',
+                    serverUrl: 'https://192.168.49.2:8443',
+                    contextName: 'minikube',
+                    clusterName: 'minikube',
+                    namespace: 'default'
+                ]) {
+                    sh 'kubectl apply -f ${WORKSPACE}/k8sDeployment.yml'
+                }
+            }
+        }
     }
 }
